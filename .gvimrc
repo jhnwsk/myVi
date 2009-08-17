@@ -13,10 +13,18 @@ let g:miniBufExplMaxSize = 2
 nmap <C-S-Tab> :TMiniBufExplorer <CR>
 nmap <C-Tab> :MiniBufExplorer<CR>
 nmap <LocalLeader>ff :FuzzyFinderFile<CR>
-nmap <LocalLeader><Tab> :FuzzyFinderMruFile<CR>
+nmap <LocalLeader>fr :FuzzyFinderMruFile<CR>
+nmap <LocalLeader>fb :FuzzyFinderBuffer<CR>
 " change window in an easy way
-nmap <LocalLeader>w <C-w>     
+nmap <Tab> <C-W>
 
+" ctrl space mapping - damn
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+\ "\<lt>C-n>" :
+\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
 
 "----------------------------------------------------------------------------
 " Set the visual style - moira rox
