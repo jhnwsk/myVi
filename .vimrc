@@ -1,32 +1,9 @@
-" Autoclose tag
-au FileType xhtml,xml so ~/.vim/ftplugin/html_autoclosetag.vim
-
-let maplocalleader='\'        " all my macros start with \
-
 "----------------------------------------------------------------------------
 " what i use with the uber cool minibufexplorer
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 let g:miniBufExplMaxSize = 2 
 
-"----------------------------------------------------------------------------
-" my navigation mappings
-
-nmap <C-S-Tab> :TMiniBufExplorer <CR>
-nmap <C-Tab> :MiniBufExplorer<CR>
-nmap <LocalLeader>ff :FuzzyFinderFile<CR>
-nmap <LocalLeader>fr :FuzzyFinderMruFile<CR>
-nmap <LocalLeader>fb :FuzzyFinderBuffer<CR>
-" change window in an easy way
-nmap <Tab> <C-W>
-
-" ctrl space mapping - damn
-inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
-\ "\<lt>C-n>" :
-\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
-\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
-\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
-imap <C-@> <C-Space>
 
 "----------------------------------------------------------------------------
 " Set the visual style - moira rox
@@ -42,7 +19,7 @@ endif
 " ---------------------------------------------------------------------------
 " first the disabled features due to security concerns
 set modelines=0               " no modelines [http://www.guninski.com/vim1.html]
-let g:secure_modelines_verbose = 0 " securemodelines vimscript
+let g:secure_modelines_verbose=0 " securemodelines vimscript
 let g:secure_modelines_modelines = 15 " 15 available modelines
 
 "Since these are all simple features, I won’t bother to explain them besides the inline comments:
@@ -85,6 +62,7 @@ compiler ruby                 " Enable compiler support for ruby
 set wildmode=longest:full
 set wildignore+=*.o,*~,.lo    " ignore object files
 set wildmenu                  " menu has tab completion
+let maplocalleader=','        " all my macros start with ,
 set foldmethod=syntax         " fold on syntax automagically, always
 set foldcolumn=2              " 2 lines of column for fold showing, always
 
@@ -103,7 +81,7 @@ let Tlist_Use_Right_Window=1
 let Tlist_Auto_Open=0
 let Tlist_Enable_Fold_Column=0
 let Tlist_Compact_Format=0
-let Tlist_WinWidth=33
+let Tlist_WinWidth=28
 let Tlist_Exit_OnlyWindow=1
 let Tlist_File_Fold_Auto_Close = 1
 
@@ -174,7 +152,7 @@ set history=200
 " spelling...
 if v:version >= 700
 
-"  setlocal spell spelllang=en
+  setlocal spell spelllang=en
   nmap <LocalLeader>ss :set spell!<CR>
 
 endif
@@ -201,7 +179,7 @@ nmap <LocalLeader>fo  :%foldopen!<cr>
 " close all folds
 nmap <LocalLeader>fc  :%foldclose!<cr>
 " ,tt will toggle taglist on and off
-nmap <LocalLeader>tt :Tlist <CR>
+nmap <LocalLeader>tt :Tlist<cr>
 " ,nn will toggle NERDTree on and off
 nmap <LocalLeader>nn :NERDTreeToggle<cr>
 " When I'm pretty sure that the first suggestion is correct
