@@ -1,13 +1,31 @@
+" all my macros start with SPACEBAR
+let maplocalleader=' '
+
+" timeouts
+" :set timeout timeoutlen=500
+
+" toggle insert mode
+nnoremap <C-CR> i
+imap <C-CR> <Esc>
+
+" quiting
+nmap <C-q> :q<CR>
+
 " wtf is this
-map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+map <localleader>n :execute 'NERDTreeToggle ' . getcwd()<CR>
+
+" initial gvim position
+:winpos 300 0
+:set lines=55
+:set columns=120
+
+" paste from clipboard
+nmap <LocalLeader>pp <MiddleMouse> 
 
 " settings for fftextmate
 " fftextmate still not worky
 let g:fuzzy_ignore = "*.log"
 let g:fuzzy_matching_limit = 70
-
-map <leader>t :FuzzyFinderTextMate<CR>
-map <leader>b :FuzzyFinderBuffer<CR>
 
 " we need this so that fuzzy finder works as planned
 " with MRU file
@@ -16,7 +34,6 @@ let g:fuf_modesDisable = []
 " Autoclose tag
 au FileType xhtml,xml so ~/.vim/ftplugin/html_autoclosetag.vim
 
-let maplocalleader='\'        " all my macros start with \
 
 "----------------------------------------------------------------------------
 " what i use with the uber cool minibufexplorer
@@ -27,11 +44,15 @@ let maplocalleader='\'        " all my macros start with \
 "----------------------------------------------------------------------------
 " my navigation mappings
 
-nmap <C-S-Tab> :FufFileWithCurrentBufferDir <CR>
+nmap <C-S-Tab> :FufFileWithFullCwd<CR>
 nmap <C-Tab> :FufBuffer<CR>
-nmap <LocalLeader>fm :FufMruFile<CR>
-nmap <LocalLeader>ff :FufFileWithFullCwd<CR>
-nmap <LocalLeader>f :FufMruCmd<CR>
+nmap <LocalLeader>ff :FufFile<CR>
+nmap <LocalLeader>b :FufBuffer<CR>
+nmap <LocalLeader>m :FufMruFile<CR>
+" breaks the timeout on ff
+" nmap <LocalLeader>ffc :FufFileWithFullCwd<CR>
+nmap <LocalLeader>c :FufMruCmd<CR>
+nmap <LocalLeader>d :FufFileWithCurrentBufferDir<CR>
 
 " change window in an easy way
 nmap <Tab> <C-W>
@@ -217,8 +238,6 @@ endif
 " Y yanks from cursor to $
 " toggle list mode
 nmap <LocalLeader>tl :set list!<cr>
-" toggle paste mode
-nmap <LocalLeader>pp :set paste!<cr>
 " change directory to that of current file
 nmap <LocalLeader>cd :cd%:p:h<cr>
 " change local directory to that of current file
@@ -233,8 +252,6 @@ nmap <LocalLeader>fo  :%foldopen!<cr>
 nmap <LocalLeader>fc  :%foldclose!<cr>
 " ,tt will toggle taglist on and off
 nmap <LocalLeader>tt :Tlist <CR>
-" ,nn will toggle NERDTree on and off
-nmap <LocalLeader>nn :NERDTreeToggle<cr>
 " When I'm pretty sure that the first suggestion is correct
 map <LocalLeader>r 1z=
 
