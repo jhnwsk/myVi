@@ -20,7 +20,8 @@ map <localleader>n :execute 'NERDTreeToggle ' . getcwd()<CR>
 :set columns=120
 
 " paste from clipboard
-nmap <LocalLeader>pp <MiddleMouse> 
+map <LocalLeader>pp "+gP 
+map <LocalLeader>yy "+y 
 
 " settings for fftextmate
 " fftextmate still not worky
@@ -51,7 +52,7 @@ nmap <LocalLeader>b :FufBuffer<CR>
 nmap <LocalLeader>m :FufMruFile<CR>
 " breaks the timeout on ff
 " nmap <LocalLeader>ffc :FufFileWithFullCwd<CR>
-nmap <LocalLeader>c :FufMruCmd<CR>
+nmap <LocalLeader>fc :FufMruCmd<CR>
 nmap <LocalLeader>d :FufFileWithCurrentBufferDir<CR>
 
 " change window in an easy way
