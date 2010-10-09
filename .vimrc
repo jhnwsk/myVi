@@ -131,6 +131,7 @@ set undolevels=1000           " 1000 undos
 set updatecount=100           " switch every 100 chars
 set complete=.,w,b,u,U,t,i,d  " do lots of scanning on tab completion
 set ttyfast                   " we have a fast terminal
+let g:tex_flavor='tex'
 filetype on                   " Enable filetype detection
 filetype indent on            " Enable filetype-specific indenting
 filetype plugin on            " Enable filetype-specific plugins
@@ -334,3 +335,5 @@ endif
 " That's it, enjoy!
 "
 
+" for tex-vim?
+set runtimepath+=/usr/share/vim/addons/
