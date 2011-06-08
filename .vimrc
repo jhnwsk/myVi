@@ -86,7 +86,11 @@ if has("gui_running")
       " let g:zenburn_alternate_Include = 1
       " let g:zenburn_force_dark_Background = 1
       " unlet g:zenburn_alternate_Include
-      colo zenburn
+      " colo zenburn
+      colo jellybeans
+      " colo inkpot
+      " colo wombat
+      " colo xoria
 
       set guioptions-=T       " no toolbar
       set cursorline          " show the cursor line
