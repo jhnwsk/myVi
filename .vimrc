@@ -44,7 +44,7 @@ au FileType xhtml,xml so ~/.vim/ftplugin/html_autoclosetag.vim
 
 "----------------------------------------------------------------------------
 " my navigation mappings
-
+let g:fuf_reuseWindow = 0
 nmap <C-S-Tab> :FufFileWithFullCwd<CR>
 nmap <C-Tab> :FufBuffer<CR>
 nmap <LocalLeader>ff :FufFile<CR>
@@ -122,7 +122,7 @@ set autoindent smartindent    " auto/smart indent
 set expandtab                 " expand tabs to spaces
 set smarttab                  " tab and backspace are smart
 set tabstop=3                 " 6 spaces
-set shiftwidth=3
+set shiftwidth=4
 set scrolloff=5               " keep at least 5 lines above/below
 set sidescrolloff=5           " keep at least 5 lines left/right
 set backspace=indent,eol,start

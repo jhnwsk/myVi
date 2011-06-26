@@ -816,7 +816,7 @@ function s:deactivateFufBuffer()
     AutoComplPopUnlock
   endif
   " must close after returning to previous window
-  wincmd p
+  wincmd j
   execute s:bufNrFuf . 'bdelete'
 endfunction
 
