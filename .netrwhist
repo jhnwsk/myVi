@@ -1,7 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/john/.vim_'
-let g:netrw_dirhist_2='/home/john/Documents/htdocs/telenerg_new'
-let g:netrw_dirhist_3='/home/john'
-let g:netrw_dirhist_4='/home/john/Development/Pyramid/malysquash/squashliga'
-let g:netrw_dirhist_5='/home/john/Development/Pyramid/env/malysquash'
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/john/development/UNIT/xmlinterface/pUXI'
+let g:netrw_dirhist_2='/home/john/development/UNIT/xmlinterface/pUXI/rc'
+let g:netrw_dirhist_3='/home/john/development/UNIT/xmlinterface/pUXI/log/11.35.54 2012-06-04'
+let g:netrw_dirhist_4='/home/john/development/UNIT/xmlinterface/pUXI'
+let g:netrw_dirhist_5='/home/john/development/UNIT/xmlinterface/pUXI/log/08.56.02 2012-06-13'
+let g:netrw_dirhist_6='/home/john/uxi/log'
+let g:netrw_dirhist_7='/home/john/uxi'
+let g:netrw_dirhist_8='/home/john/uxi/log'
+let g:netrw_dirhist_9='/var/lib/postgresql/9.1'
