@@ -15,9 +15,11 @@ nmap <C-q> :q<CR>
 map <localleader>n :execute 'NERDTreeToggle ' . getcwd()<CR>
 
 " initial gvim position
-:winpos 300 0
-:set lines=55
-:set columns=120
+":winpos 300 0
+":set lines=55
+":set columns=120
+":set winheight=9999
+":set winwidth=9999
 
 " paste from clipboard
 map <LocalLeader>pp "+gP 
