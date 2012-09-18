@@ -12,11 +12,13 @@ map <Leader>yy "+y
 " }
 
 " CtrlP {
-nmap <C-Tab> :CtrlPBuffer<CR>
+" I do mru a lot
+nmap <C-Tab> :CtrlPMRUFilesrlPBuffer<CR>
 let g:ctrlp_cmd = 'CtrlPMRUFiles'
+" and would like them pop up on top
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
-" let g:ctrlp_by_filename = 1
+
 let g:ctrlp_regexp = 1
 let g:ctrlp_show_hidden = 1
 " }
