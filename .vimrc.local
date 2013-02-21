@@ -1,7 +1,10 @@
+let g:vundle_default_git_proto = 'git'
 colorscheme jellybeans
 
 " general stuff {
 imap <C-CR> <Esc>
+vmap <C-CR> <Esc>
+nmap <C-CR> <Esc>
 nmap <C-s> :w!<CR>
 set nospell
 " }
@@ -9,6 +12,11 @@ set nospell
 " paste from clipboard {
 map <Leader>pp "+gP
 map <Leader>yy "+y
+" }
+" window maximize minimize {
+map <Leader><Tab> <C-W>\|
+map <Leader>= <C-W>=
+
 " }
 
 " CtrlP {
@@ -23,6 +31,10 @@ let g:ctrlp_show_hidden = 1
 
 " NERDTree {
 let NERDTreeQuitOnOpen=0
+" }
+
+" PyMode {
+" let g:pymode_lint_checker = \"pep8\"
 " }
 
 " GUI Settings {
