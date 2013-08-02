@@ -1,5 +1,5 @@
 let g:vundle_default_git_proto = 'git'
-colorscheme jellybeans
+colorscheme twilight
 
 " general stuff {
 imap <C-CR> <Esc>
@@ -7,6 +7,7 @@ vmap <C-CR> <Esc>
 nmap <C-CR> <Esc>
 nmap <C-s> :w!<CR>
 set nospell
+set foldmethod=indent
 " }
 
 " paste from clipboard {
@@ -22,6 +23,7 @@ map <Leader>= <C-W>=
 " CtrlP {
 nmap <C-Tab> :CtrlPBuffer<CR>
 nmap <Leader>m :CtrlPMRUFiles<CR>
+nmap <Leader>sm :CtrlPBufTagAll<CR>
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
 
