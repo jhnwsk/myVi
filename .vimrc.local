@@ -27,7 +27,6 @@ nmap <Leader>sm :CtrlPBufTagAll<CR>
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
 
-let g:ctrlp_regexp = 1
 let g:ctrlp_show_hidden = 1
 " }
 
@@ -42,9 +41,10 @@ let NERDTreeQuitOnOpen=0
 " GUI Settings {
 if has('gui_running')
     if has("gui_gtk2")
-        set guifont=Andale\ Mono\ Regular\ 10,Monospace\ 9,Menlo\ Regular\ 10,Consolas\ Regular\ 10,Courier\ New\ Regular\ 10
+        set guifont=Monospace\ 9,Menlo\ Regular\ 10,Consolas\ Regular\ 10,Courier\ New\ Regular\ 10
     else
-        set guifont=Andale\ Mono\ Regular:h10,Monospace:h9,Menlo\ Regular:h10,Consolas\ Regular:h10,Courier\ New\ Regular:h10
+        set guifont=Monospace:h9,Menlo\ Regular:h10,Consolas\ Regular:h10,Courier\ New\ Regular:h10
     endif
 endif
 " }
+
